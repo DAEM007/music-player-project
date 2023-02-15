@@ -55,10 +55,6 @@
             border-radius:190px;
         }
         
-        .now-playing {
-            font-size: 1rem;
-        }
-        
         .track-name {
             font-size: 2.5rem;
         }
@@ -237,7 +233,11 @@
     <div class="player">
         <div class="wrapper">
                 <div class="details">
-                    <div class="now-playing">PLAYING x OF y</div>
+                    <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                    </div>
                     <div class="track-art"></div>
                     <div class="track-name">Track Name</div>
                     <div class="track-artist">Track Artist</div>
@@ -249,11 +249,11 @@
                     <div class="total-duration">00:00</div>
                 </div>
     
-                <div class="slider_container">
+                <!-- <div class="slider_container">
                     <i class="fa fa-volume-down"></i>
                     <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
                     <i class="fa fa-volume-up"></i>
-                </div>
+                </div> -->
 
                 <div class="buttons">
                     <div class="random-track" onclick="randomTrack()">
@@ -287,7 +287,7 @@
         </div>
     </div>
 
-    <!-- ALL JavaScripts -->
+    <!-- ALL Scripts -->
     <script>
         let now_playing = document.querySelector('.now-playing');
         let track_art = document.querySelector('.track-art');
