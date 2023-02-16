@@ -125,12 +125,32 @@
         
         .slider_container {
             display: flex;
+            position: relative;
             justify-content: center;
             align-items: center;
         }
 
         .slider_container {
             background-color: none;
+        }
+
+        .slider_container .fa-volume-up {
+            position: absolute;
+            top: 90px;
+            left: 150px;
+        }
+
+        .volume_slider {
+            position: absolute;
+            top: 180px;
+            left: 165px;
+            transform: rotate(90deg);
+        }
+
+        .slider_container .fa-volume-down {
+            position: absolute;
+            top: 200px;
+            left: 150px;
         }
         
         .seek_slider, .volume_slider {
